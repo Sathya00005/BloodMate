@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard | Blood Bank Management</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="index">
+    <div class="sidebar">
+        <div class="logo">
+            <img src="{{ url_for('static', filename='logo.jpg') }}" alt="Blood Bank Logo" style="width: 100px; margin: 0 auto 20px; display: block;">
+        </div>
+        <h2>Blood Bank</h2>
+        <a href="/index" class="active">Dashboard</a>
+        <a href="/donor_register">Register Donor</a>
+        <a href="/recipient_register">Register Recipient</a>
+        <a href="/logout">Logout</a>
+       
+    </div>
+
+    <div class="main-content">
+        <h1>Welcome, {{ user }}</h1>
+        <p class="welcome-msg">You're logged in to the Blood Bank Management System.</p>
+
+        <div class="dashboard-cards">
+            <div class="card">
+                <h3><u>About us</u></h3>
+                <p>
+                    This system empowers hospitals, blood banks, and individuals to easily register donors, manage donor data, and identify matching donors based on blood groups and eligibility criteria. We believe that technology can play a pivotal role in saving lives, and this system stands as a step toward that mission.
+                </p>
+                <p>
+                    Our platform ensures quick registration, real-time donor-recipient matching, and comprehensive donor eligibility screening. Every blood donor plays a vital role in our society, and we aim to provide a simple and secure interface to support this noble cause.
+                </p>
+                <p>
+                    Together, we can create a healthier and stronger community. Every drop of blood donated has the power to save a life, and every effort you make here brings us closer to a safer and more responsive healthcare environment.
+                </p>
+                <p>
+                    Thank you for being a part of this life-saving journey. Let’s continue to make a difference — one donor, one recipient, and one life at a time.
+                </p>
+               
+            </div>
+            <div class="card">
+                <h3>Our branches</h3>
+                <ul>
+                    <li>Bangalore</li>
+                    <li>Chennai</li>
+                    <li>Ahmedabad</li>
+                    <li>Hydrabad</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Available Blood Groups</h3>
+                <p>All kinds of blood groups are availabe depending on donor availability</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,173 @@
+/* General Styling */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #0d0d0d;
+    color: #f2f2f2;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Header */
+header {
+    background-color: #1a1a1a;
+    color: #ff3333;
+    padding: 1rem;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    border-bottom: 2px solid #ff3333;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 230px;
+    background-color: #111;
+    padding-top: 60px;
+    border-right: 2px solid #ff3333;
+}
+
+.sidebar a {
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: #f2f2f2;
+    transition: 0.3s;
+    border-bottom: 1px solid #333;
+}
+
+.sidebar a:hover {
+    background-color: #ff3333;
+    color: #000;
+    font-weight: bold;
+}
+
+.main-content {
+    margin-left: 250px;
+    padding: 30px;
+}
+
+/* Form Styling */
+form {
+    background-color: #1a1a1a;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(255, 51, 51, 0.3);
+    max-width: 600px;
+    margin: auto;
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    color: #f2f2f2;
+    font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="password"],
+form input[type="number"],
+form select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    background-color: #262626;
+    color: #fff;
+    border: 1px solid #ff3333;
+    border-radius: 6px;
+}
+
+form input[type="submit"] {
+    background-color: #ff3333;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    cursor: pointer;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+form input[type="submit"]:hover {
+    background-color: #cc0000;
+}
+
+/* Matching Donors Table */
+.table-container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
+}
+
+.table-container table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #fff;
+}
+
+.table-container th,
+.table-container td {
+    padding: 15px;
+    border-bottom: 1px solid #444;
+    text-align: left;
+}
+
+.table-container th {
+    background-color: #ff3333;
+    color: #000;
+}
+
+.table-container tr:hover {
+    background-color: #333;
+}
+
+/* Flash Messages */
+.alert {
+    padding: 15px;
+    margin: 20px auto;
+    width: 60%;
+    border-radius: 8px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.alert-success {
+    background-color: #2ecc71;
+    color: white;
+}
+
+.alert-danger {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.alert-warning {
+    background-color: #f1c40f;
+    color: black;
+}
+
+.alert-info {
+    background-color: #3498db;
+    color: white;
+}
+
+/* Certificate Page */
+.certificate {
+    background-color: #111;
+    text-align: center;
+    color: #ff3333;
+    padding: 100px;
+    font-size: 2rem;
+    border: 5px double #ff3333;
+    border-radius: 12px;
+    margin: 50px auto;
+    width: 80%;
+    box-shadow: 0 0 25px rgba(255, 0, 0, 0.4);
+}

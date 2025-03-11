@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Donor Registration</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        body { font-family: Arial, sans-serif; background: #01070f; padding: 20px; }
+        .container { max-width: 800px; margin: auto; background: rgb(14, 0, 0); padding: 30px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        h2 { text-align: center; margin-bottom: 20px; }
+        form input, select { width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: 1px solid #ccc; }
+        .eligibility-group { margin-top: 20px; }
+        .eligibility-group label { display: block; margin-top: 10px; }
+        button { background: #28a745; color: white; border: none; padding: 10px 20px; cursor: pointer; border-radius: 5px; }
+        button:hover { background: #218838; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Donor Registration Form</h2>
+        <form method="POST" action="/donor_register">
+            <label>Full Name:</label>
+            <input type="text" name="name" required>
+
+            <label>Blood Group:</label>
+            <select name="blood_group" required>
+                <option value="">Select</option>
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>
+                <option value="O+">O+</option>
+                <option value="O-">O-</option>
+                <option value="AB+">AB+</option>
+                <option value="AB-">AB-</option>
+            </select>
+
+            <label>Contact Number:</label>
+            <input type="text" name="contact" required>
+
+            <label>Age:</label>
+            <input type="number" name="age" required>
+
+            <label>City:</label>
+            <input type="text" name="city" required>
+
+            <label>Any Known Disease:</label>
+            <input type="text" name="disease" placeholder="Enter or write None if none">
+
+            <div class="eligibility-group">
+                <h3>Eligibility Questions (All must be "Yes"):</h3>
+<!--add any eligibility questions-->
+                {% for i in range(1, 11) %}
+                    <label>Question {{ i }}: <span style="font-weight: normal;">Are you healthy and fit for donation?</span></label>
+                    <select name="eligible{{ i }}" required>
+                        <option value="">Select</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select>
+                {% endfor %}
+            </div>
+
+            <div style="text-align: center; margin-top: 20px;">
+                <button type="submit">Register as Donor</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

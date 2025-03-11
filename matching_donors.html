@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Matching Donors</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Matching Donors for Blood Group: {{ blood_group }}</h2>
+        {% if donors %}
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Contact</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for donor in donors %}
+                        <tr>
+                            <td>{{ donor[0] }}</td>
+                            <td>{{ donor[1] }}</td>
+                            <td>{{ donor[2] }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% else %}
+            <p>No matching donors available.</p>
+        {% endif %}
+        <a href="/index">Back to Dashboard</a>
+    </div>
+</body>
+</html>
